@@ -1,0 +1,58 @@
+% Кодировка и язык
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+
+% Шрифт
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Times New Roman}
+\setmonofont{FreeMono}
+
+% Поля
+\usepackage[left=30mm,right=10mm,top=20mm,bottom=20mm]{geometry}
+
+% Полуторный межстрочный интервал
+\renewcommand{\baselinestretch}{1.4}
+
+% Абзацный отступ 1.25см
+\usepackage{indentfirst}
+\setlength\parindent{12.5mm}
+
+% Для использования \dotuline
+\usepackage[dot]{dashundergaps}
+
+% Гиперссылки
+\usepackage[colorlinks=false,unicode=true]{hyperref}
+
+% Картинки
+\usepackage[dvips]{graphicx}
+\graphicspath{{graphics/}}
+
+% Таблицы
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{array}
+
+% Листинги
+\usepackage{listings}
+
+% Возможность поиска по pdf
+\usepackage{cmap}
+
+% Перечисления вида n.m.k.
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\theenumii}{.\arabic{enumii}}
+\renewcommand{\theenumiii}{.\arabic{enumiii}}
+\renewcommand{\labelenumi}{\arabic{enumi}}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
+\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}
+
+% Библиография
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.}
+\makeatother
+
+\usepackage{amsthm,amssymb,amsmath}
+\usepackage{ulem}
