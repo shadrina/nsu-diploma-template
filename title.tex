@@ -34,7 +34,18 @@
 
 \begin{flushleft}
 	\begin{minipage}[t]{0.65\textwidth}
-		$\underset{\text{(Фамилия, Имя, Отчество студента, группа)}}{\text{\uline{\student\hspace{30mm}}}}$
+		\newcommand{\sub}{(Фамилия, Имя, Отчество студента, группа)}
+		\StrLen{\sub}[\sublen]
+		\StrLen{\student}[\studentlen]
+		\ifthenelse{\sublen>\studentlen}
+		{
+			% В случае, когда ФИО короче подписи, добавляется небольшой отступ, чтобы избежать
+			% лишних пробелов. 
+			$\underset{\text{\sub}}{\text{\uline{\student\hspace{0.1\textwidth}}}}$\uline{\hfill}
+		}
+		{
+			$\underset{\text{\sub}}{\text{\uline{\student}}}$\uline{\hfill}
+		}
 		, группа \uline{\group\hfill} \\
 	\end{minipage}
 	\hfill
@@ -45,7 +56,6 @@
 
 \newcommand{\datetemplate}{<<\dotuline{\hspace{9mm}}>>\dotuline{\hspace{26mm}}20\dotuline{\hspace{5mm}}г.}
 \newcommand{\infotemplate}{$\underset{\text{(ФИО) / (подпись)}}{\text{\dotuline{\hspace{0.5\textwidth}/\hspace{0.45\textwidth}}}}$}
-
 \begin{flushleft}
 	\begin{minipage}[b]{0.3\textwidth}
 		\textbf{<<К защите допущена>>} \\
@@ -55,7 +65,7 @@
 		\infotemplate \\[3mm]
 		\datetemplate
 	\end{minipage}
-	\hspace{22.5mm}
+	\hspace{20mm}
 	\begin{minipage}[b]{0.3\textwidth}
 		\textbf{Руководитель ВКР} \\
 		\sadegree, \sarank \\
