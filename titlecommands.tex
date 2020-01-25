@@ -1,3 +1,5 @@
+\newcommand{\currentyear}{20\underline{20}г.}
+
 \newcommand{\titleheader}
 {
 	\begin{center}
@@ -21,29 +23,44 @@
 	\end{flushleft}
 }
 
-% Taken from https://tex.stackexchange.com/a/42477
-\makeatletter
-\newcommand{\dynscriptsize}{\check@mathfonts\fontsize{\sf@size}{\z@}\selectfont}
-\makeatother
-\newcommand\textunderset[2]
-{
-	\leavevmode
-	\vtop{\offinterlineskip
-		\halign{%
-			\hfil##\hfil\cr
-			\strut#2\cr
-			\noalign{\kern.5ex}
-			\dynscriptsize\strut#1\cr
-		}%
-	}%
-}
-
 \newcommand{\topic}[1]
 {
 	\begin{center}
 		\textbf{ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА} \\
-		\textunderset{(название темы прописными буквами)}{\uline{#1}}
+		\uline{\hfill\MakeUppercase{#1}\hfill} \\[1.5mm]
+		\hrulefill \\
+		$\underset{\text{(название темы прописными буквами)}}{\uline{\hspace{\textwidth}}}$
 	\end{center}
+}
+
+\newcommand{\approved}[3]
+{
+	\begin{flushleft}
+		утверждена распоряжением проректора по учебной работе № \underline{#1} 
+		от <<\underline{#2}>> \underline{#3} \currentyear 
+	\end{flushleft}
+}
+
+\newcommand{\corrected}[3]
+{
+	\begin{flushleft}
+		скорректирована распоряжением проректора по учебной работе № \underline{#1} 
+		от <<\underline{#2}>> \underline{#3} \currentyear 
+	\end{flushleft}
+}
+
+\newcommand{\student}[4]
+{
+	\begin{flushleft}
+		\begin{minipage}[t]{0.65\textwidth}
+			$\underset{\text{(Фамилия, Имя, Отчество студента, группа)}}{\text{\uline{#1 #2 #3\hspace{30mm}}}}$
+			, группа \uline{#4\hfill}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.2\textwidth}
+			$\underset{\text{(подпись студента)}}{\text{\uline{\hspace{\textwidth}}}}$
+		\end{minipage}
+	\end{flushleft}
 }
 
 \newcommand{\titlefooter}
@@ -51,7 +68,7 @@
 	\begingroup
 		\fontsize{10pt}{12pt}\selectfont
 		\begin{center}  
-			Новосибирск, 20\underline{20}г.
+			Новосибирск, \currentyear
 		\end{center}
 	\endgroup
 }
