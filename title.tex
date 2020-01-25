@@ -29,19 +29,48 @@
 	утверждена распоряжением проректора по учебной работе № \uline{\approvedby} 
 	от <<\uline{\dayapprovedby}>> \uline{\monthapprovedby} \currentyear \\
 	скорректирована распоряжением проректора по учебной работе № \uline{\correctedby} 
-	от <<\uline{\daycorrectedby}>> \uline{\monthcorrectedby} \currentyear 
+	от <<\uline{\daycorrectedby}>> \uline{\monthcorrectedby} \currentyear \\
 \end{flushleft}
 
 \begin{flushleft}
 	\begin{minipage}[t]{0.65\textwidth}
 		$\underset{\text{(Фамилия, Имя, Отчество студента, группа)}}{\text{\uline{\student\hspace{30mm}}}}$
-		, группа \uline{\group\hfill}
+		, группа \uline{\group\hfill} \\
 	\end{minipage}
 	\hfill
 	\begin{minipage}[t]{0.2\textwidth}
-		$\underset{\text{(подпись студента)}}{\text{\uline{\hspace{\textwidth}}}}$
+		$\underset{\text{(подпись студента)}}{\text{\uline{\hspace{\textwidth}}}}$ \\
 	\end{minipage}
 \end{flushleft}
+
+\newcommand{\datetemplate}{<<\dotuline{\hspace{9mm}}>>\dotuline{\hspace{26mm}}20\dotuline{\hspace{5mm}}г.}
+\newcommand{\infotemplate}{$\underset{\text{(ФИО) / (подпись)}}{\text{\dotuline{\hspace{0.5\textwidth}/\hspace{0.45\textwidth}}}}$}
+
+\begin{flushleft}
+	\begin{minipage}[b]{0.3\textwidth}
+		\textbf{<<К защите допущена>>} \\
+		Заведующий кафедрой, \\
+		\apdegree, \aprank \\
+		\apname \\
+		\infotemplate \\[3mm]
+		\datetemplate
+	\end{minipage}
+	\hspace{22.5mm}
+	\begin{minipage}[b]{0.3\textwidth}
+		\textbf{Руководитель ВКР} \\
+		\sadegree, \sarank \\
+		кафедры \department \\
+		\saname \\
+		\infotemplate \\[3mm]
+		\datetemplate
+	\end{minipage}
+\end{flushleft}
+
+\begin{flushright}
+	\vfill
+	Дата защиты: \datetemplate
+	\vfill
+\end{flushright}
 
 \begingroup
 	\fontsize{10pt}{12pt}\selectfont
