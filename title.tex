@@ -1,18 +1,53 @@
-\input{titlecommands}
-
 \begin{titlepage}
 \newpage
 
-\titleheader
+\begin{center}
+	МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ \\
+	\vspace{5mm}
+	ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ 
+	УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\
+	\vspace{5mm}
+	<<НОВОСИБИРСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ>> \\
+	(НОВОСИБИРСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ, НГУ) \\
+\end{center}
 
-\department{Название вашей кафедры}
-\topic{Название вашей выпускной квалификационной работы}
+\begin{flushleft}
+	Факультет информационных технологий \\
+	Кафедра \dotuline{\department\hfill} \\
+	Направление подготовки: 09.03.01 ИНФОРМАТИКА И ВЫЧИСЛИТЕЛЬНАЯ ТЕХНИКА \\
+	Образовательная программа: 09.03.01 ИНФОРМАТИКА И ВЫЧИСЛИТЕЛЬНАЯ ТЕХНИКА \\
+\end{flushleft}
 
-\approved{11}{22}{мая}
-\corrected{22}{11}{мая}
+\begin{center}
+	\textbf{ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА} \\
+	\uline{\hfill\MakeUppercase{\topic}\hfill} \\[1.5mm]
+	\hrulefill \\
+	$\underset{\text{(название темы прописными буквами)}}{\uline{\hspace{\textwidth}}}$
+\end{center}
 
-\student{Фамилия}{Имя}{Отчество}{12345}
+\begin{flushleft}
+	утверждена распоряжением проректора по учебной работе № \uline{\approvedby} 
+	от <<\uline{\dayapprovedby}>> \uline{\monthapprovedby} \currentyear \\
+	скорректирована распоряжением проректора по учебной работе № \uline{\correctedby} 
+	от <<\uline{\daycorrectedby}>> \uline{\monthcorrectedby} \currentyear 
+\end{flushleft}
 
-\titlefooter
+\begin{flushleft}
+	\begin{minipage}[t]{0.65\textwidth}
+		$\underset{\text{(Фамилия, Имя, Отчество студента, группа)}}{\text{\uline{\student\hspace{30mm}}}}$
+		, группа \uline{\group\hfill}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.2\textwidth}
+		$\underset{\text{(подпись студента)}}{\text{\uline{\hspace{\textwidth}}}}$
+	\end{minipage}
+\end{flushleft}
+
+\begingroup
+	\fontsize{10pt}{12pt}\selectfont
+	\begin{center}  
+		Новосибирск, \currentyear
+	\end{center}
+\endgroup
 
 \end{titlepage}
