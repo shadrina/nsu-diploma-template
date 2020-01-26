@@ -55,9 +55,19 @@
 \renewcommand{\@biblabel}[1]{#1.}
 \makeatother
 
-% Возможность поиска по pdf
+% Поиск по pdf
 \usepackage{cmap}
 
-% Для сравнения длин строк
+% Сравнение длин строк
 \usepackage{ifthen}
 \usepackage{xstring}
+
+% Подсчет количества иллюстраций, таблиц и т.д.
+\usepackage[figure,table]{totalcount}
+\usepackage{totcount}
+\regtotcounter{page}
+\newtotcounter{citenum}
+\def\oldcite{}
+\let\oldcite=\bibcite
+\def\bibcite{\stepcounter{citenum}\oldcite}
+\newtotcounter{attachnum}
