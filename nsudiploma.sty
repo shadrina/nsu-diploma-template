@@ -32,11 +32,40 @@
 
 % Таблицы
 \usepackage{multirow}
-\usepackage[table,xcdraw]{xcolor}
 \usepackage{longtable}
 
 % Листинги
 \usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+
+% Подписи к картинкам, таблицам и листингам
+\usepackage{caption}
+\captionsetup[figure]{name={Рисунок},labelsep=endash}
+\captionsetup[table]{name={Таблица},labelsep=endash,justification=raggedright,singlelinecheck=false}
+\captionsetup[lstlisting]{labelsep=endash}
 
 % Математика
 \usepackage{amsthm,amssymb,amsmath}
@@ -62,11 +91,6 @@
 \hyphenpenalty=1000
 \clubpenalty=10000
 \widowpenalty=10000
-
-% Библиография
-\makeatletter
-\renewcommand{\@biblabel}[1]{#1.}
-\makeatother
 
 % Поиск по pdf
 \usepackage{cmap}
@@ -101,4 +125,7 @@
 \titlespacing*{\section}{\parindent}{15pt}{10pt}
 \titlespacing*{\subsection}{\parindent}{15pt}{10pt}
 
-\usepackage{blindtext}
+% Библиография
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.}
+\makeatother

@@ -1,1 +1,38 @@
 \chapter{Последняя глава с примерами формул и листингов}
+
+В \href{http://fit.nsu.ru/data_/docs/bak/OOP/4_RPD/09.03.01/_09.03.01_GIA.pdf}{программе аттестации} ничего не сказано про оформление формул и листингов, поэтому здесь просто будут примеры и того, и другого, взятые из разных источников.
+
+Какая-то формула:
+
+\begin{equation}
+\begin{pmatrix} 
+	\dot{\varphi}\\ \dot{\theta} \\ \dot{\psi} 
+\end{pmatrix} =
+\begin{pmatrix}
+	cos(\theta)cos(\psi) & -sin(\psi) & 0 \\
+	cos(\theta)sin(\psi) & cos(\psi)  & 0 \\
+	-sin(\theta)         & 0         &  1
+\end{pmatrix}^{-1}
+\begin{pmatrix}
+	\omega_x\\ \omega_y \\ \omega_z
+\end{pmatrix}.
+\end{equation}
+
+Еще какая-то формула:
+
+\begin{equation}
+\int_{a}^{b} f(x)dx = F(b) - F(a)
+\label{eq:eq-sample}
+\end{equation}
+
+Здесь ссылка на формулу \ref{eq:eq-sample}.
+
+А здесь пример листинга с подписью. Подпись оформляется аналогично подписи к картинке.
+
+\begin{lstlisting}[language=Java,caption=Пример листинга]
+List<String> list = Stream.of("item1", "item2", "item3")
+						.sequential()
+						.filter(new TreeSet<>()::add)
+						.collect(Collectors.toList());
+System.out.println(list);
+\end{lstlisting}
