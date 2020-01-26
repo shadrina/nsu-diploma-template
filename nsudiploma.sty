@@ -42,13 +42,21 @@
 % Математика
 \usepackage{amsthm,amssymb,amsmath}
 
-% Перечисления вида n.m.k.
-\renewcommand{\theenumi}{\arabic{enumi}}
-\renewcommand{\theenumii}{.\arabic{enumii}}
-\renewcommand{\theenumiii}{.\arabic{enumiii}}
-\renewcommand{\labelenumi}{\arabic{enumi}}
-\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
-\renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}
+% Перечисления
+\usepackage{enumitem}
+\renewcommand{\@listI}
+{
+	\leftmargin=25pt
+	\rightmargin=0pt
+	\labelsep=5pt
+	\labelwidth=20pt
+	\itemindent=0pt
+	\listparindent=0pt
+	\topsep=0pt plus 2pt minus 4pt
+	\partopsep=0pt plus 1pt minus 1pt
+	\parsep=0pt plus 1pt
+	\itemsep=\parsep
+}
 
 % Переносы
 \sloppy
