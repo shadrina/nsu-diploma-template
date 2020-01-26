@@ -27,14 +27,13 @@
 \usepackage[colorlinks=false,unicode=true]{hyperref}
 
 % Картинки
-\usepackage[dvips]{graphicx}
-\graphicspath{{graphics/}}
+\usepackage{graphicx}
+\graphicspath{ {./graphics/} }
 
 % Таблицы
-\usepackage{longtable}
-\usepackage{makecell}
 \usepackage{multirow}
-\usepackage{array}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{longtable}
 
 % Листинги
 \usepackage{listings}
@@ -98,5 +97,8 @@
 \titleformat{\section}{\normalfont\bfseries}{\thesection}{10pt}{}
 \titleformat{\subsection}{\normalfont}{\thesubsection}{10pt}{}
 \titlespacing*{\chapter}{0pt}{-12pt}{11pt}
-\titlespacing*{\section}{\parindent}{10pt}{10pt}
-\titlespacing*{\subsection}{\parindent}{10pt}{10pt}
+% TODO: Посмотреть в ГОСТе точную величину интервалов
+\titlespacing*{\section}{\parindent}{15pt}{10pt}
+\titlespacing*{\subsection}{\parindent}{15pt}{10pt}
+
+\usepackage{blindtext}
