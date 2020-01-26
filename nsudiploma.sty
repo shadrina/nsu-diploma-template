@@ -71,3 +71,8 @@
 \let\oldcite=\bibcite
 \def\bibcite{\stepcounter{citenum}\oldcite}
 \newtotcounter{attachnum}
+
+% Оформление содержания
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\normalfont\bfseries\MakeUppercase}
+\renewcommand{\cftbeforetoctitleskip}{-1em}
