@@ -50,6 +50,12 @@
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}
 
+% Переносы
+\sloppy
+\hyphenpenalty=1000
+\clubpenalty=10000
+\widowpenalty=10000
+
 % Библиография
 \makeatletter
 \renewcommand{\@biblabel}[1]{#1.}
@@ -72,7 +78,17 @@
 \def\bibcite{\stepcounter{citenum}\oldcite}
 \newtotcounter{attachnum}
 
-% Оформление содержания
+% Содержание
 \usepackage{tocloft}
 \renewcommand{\cfttoctitlefont}{\normalfont\bfseries\MakeUppercase}
 \renewcommand{\cftbeforetoctitleskip}{-1em}
+\renewcommand{\cftaftertoctitleskip}{1pt}
+
+% Главы, разделы, подразделы
+\usepackage{titlesec}
+\titleformat{\chapter}{\centering\normalfont\bfseries\MakeUppercase}{}{0pt}{}
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{10pt}{}
+\titleformat{\subsection}{\normalfont}{\thesubsection}{10pt}{}
+\titlespacing*{\chapter}{0pt}{-12pt}{11pt}
+\titlespacing*{\section}{\parindent}{10pt}{10pt}
+\titlespacing*{\subsection}{\parindent}{10pt}{10pt}
