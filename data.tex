@@ -1,6 +1,7 @@
 % Общие сведения
 \newcommand{\student}{Фамилия Имя Отчество}
-\newcommand{\studentformedname}{Фамилия Имя Отчество в тв. падеже}
+\newcommand{\studentfortask}{Фамилия Имя Отчество в дат. падеже}
+\newcommand{\studentforabstract}{Фамилия Имя Отчество в тв. падеже}
 \newcommand{\group}{12345}
 \newcommand{\department}{Название кафедры}
 \newcommand{\topic}{Название вашей выпускной квалификационной работы}
@@ -15,15 +16,27 @@
 \newcommand{\daycorrectedby}{21}       % Дата
 \newcommand{\monthcorrectedby}{ноября} % Дата
 
+% Срок сдачи студентом готовой работы
+\newcommand{\readydate}{12 мая}
+
 % Заведующий кафедрой
-\newcommand{\apname}{И.О.~Фамилия}
+\newcommand{\apinitials}{И.О.}
+\newcommand{\aplastname}{Фамилия}
+\newcommand{\apname}{\apinitials~\aplastname}
 \newcommand{\apdegree}{д.ф.-м.н.}
 \newcommand{\aprank}{доцент}
 
 % Руководитель ВКР
-\newcommand{\saname}{И.О.~Фамилия}
+\newcommand{\sainitials}{И.О.}
+\newcommand{\salastname}{Фамилия}
+\newcommand{\saname}{\sainitials~\salastname}
 \newcommand{\sadegree}{к.ф.-м.н.}
 \newcommand{\sarank}{доцент}
+
+% Консультант
+\newcommand{\scinitials}{И.О.}
+\newcommand{\sclastname}{Фамилия}
+\newcommand{\scname}{\sainitials~\salastname}
 
 \newcommand{\university}{Новосибирский государственный университет}
 \newcommand{\universitylong}{Новосибирский национальный исследовательский государственный университет}
@@ -31,4 +44,8 @@
 \newcommand{\faculty}{Факультет информационных технологий}
 \newcommand{\programnum}{09.03.01}
 \newcommand{\programname}{Информатика и вычислительная техника}
-\newcommand{\currentyear}{20\uline{20}г.}
+
+\newcommand{\prevyear}[1][]{\ifthenelse{\equal{#1}{}}{2019г.}{20#1{19}г.}}
+\newcommand{\currentyear}[1][]{\ifthenelse{\equal{#1}{}}{2020г.}{20#1{20}г.}}
+\newcommand{\datetemplate}{<<\dotuline{\hspace{9mm}}>>\dotuline{\hspace{33mm}}20\dotuline{\hspace{5mm}}г.}
+\newcommand{\infotemplate}{$\underset{\text{(ФИО) / (подпись)}}{\text{\dotuline{\hspace{0.5\textwidth}/\hspace{0.45\textwidth}}}}$}

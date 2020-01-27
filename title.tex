@@ -2,13 +2,10 @@
 \newpage
 
 \begin{center}
-	МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ \\
-	\vspace{5mm}
-	ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ 
-	УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\
-	\vspace{5mm}
-	<<\MakeUppercase{\universitylong}>> \\
-	(\MakeUppercase{\university}, \universityshort) \\
+	МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ \\[1mm]
+	ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\[1mm]
+	<<\MakeUppercase{\universitylong}>> \\[1mm]
+	(\MakeUppercase{\university}, \universityshort)
 \end{center}
 
 \begin{flushleft}
@@ -27,9 +24,9 @@
 
 \begin{flushleft}
 	утверждена распоряжением проректора по учебной работе № \uline{\approvedby} 
-	от <<\uline{\dayapprovedby}>> \uline{\monthapprovedby} \currentyear \\
+	от <<\uline{\dayapprovedby}>> \uline{\monthapprovedby} \prevyear[\uline] \\
 	скорректирована распоряжением проректора по учебной работе № \uline{\correctedby} 
-	от <<\uline{\daycorrectedby}>> \uline{\monthcorrectedby} \currentyear \\
+	от <<\uline{\daycorrectedby}>> \uline{\monthcorrectedby} \prevyear[\uline] \\
 \end{flushleft}
 
 \begin{flushleft}
@@ -54,15 +51,13 @@
 	\end{minipage}
 \end{flushleft}
 
-\newcommand{\datetemplate}{<<\dotuline{\hspace{9mm}}>>\dotuline{\hspace{33mm}}20\dotuline{\hspace{5mm}}г.}
-\newcommand{\infotemplate}{$\underset{\text{(ФИО) / (подпись)}}{\text{\dotuline{\hspace{0.5\textwidth}/\hspace{0.45\textwidth}}}}$}
 \begin{flushleft}
 	\begin{minipage}[b]{0.35\textwidth}
 		\textbf{<<К защите допущена>>} \\
 		Заведующий кафедрой, \\
 		\apdegree, \aprank \\
 		\apname \\
-		\infotemplate \\[3mm]
+		\infotemplate \\[2mm]
 		\datetemplate
 	\end{minipage}
 	\hspace{25mm}
@@ -71,7 +66,7 @@
 		\sadegree, \sarank \\
 		кафедры \department \\
 		\saname \\
-		\infotemplate \\[3mm]
+		\infotemplate \\[2mm]
 		\datetemplate
 	\end{minipage}
 \end{flushleft}
@@ -85,7 +80,7 @@
 \begingroup
 	\fontsize{10pt}{12pt}\selectfont
 	\begin{center}  
-		Новосибирск, \currentyear
+		Новосибирск, \currentyear[\uline]
 	\end{center}
 \endgroup
 
