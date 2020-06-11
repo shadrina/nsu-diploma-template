@@ -116,10 +116,10 @@
 \renewcommand{\cftaftertoctitleskip}{1pt}
 
 % Главы, разделы, подразделы
-\usepackage{titlesec}
-\titleformat{\chapter}{\centering\normalfont\bfseries\MakeUppercase}{}{0pt}{}
-\titleformat{\section}{\normalfont\bfseries}{\thesection}{10pt}{}
-\titleformat{\subsection}{\normalfont}{\thesubsection}{10pt}{}
+\usepackage[explicit]{titlesec}
+\titleformat{\chapter}{\centering\normalfont\bfseries}{\thechapter}{10pt}{\MakeUppercase{#1}}
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{10pt}{#1}
+\titleformat{\subsection}{\normalfont}{\thesubsection}{10pt}{#1}
 \titlespacing*{\chapter}{0pt}{-12pt}{11pt}
 % TODO: Посмотреть в ГОСТе точную величину интервалов
 \titlespacing*{\section}{\parindent}{15pt}{10pt}
