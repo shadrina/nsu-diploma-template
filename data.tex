@@ -4,9 +4,11 @@
 \newcommand{\studentforabstract}{Фамилия Имя Отчество в тв. падеже}
 \newcommand{\group}{12345}
 \newcommand{\department}{Название кафедры}
+\newcommand{\specialization}{Название направления}
 \newcommand{\topic}{Название вашей выпускной квалификационной работы}
 \newcommand{\university}{Новосибирский государственный университет}
 \newcommand{\universitylong}{Новосибирский национальный исследовательский государственный университет}
+\newcommand{\universitylongsplit}{Новосибирский национальный исследовательский \\ государственный университет}
 \newcommand{\universityshort}{НГУ}
 \newcommand{\faculty}{Факультет информационных технологий}
 \newcommand{\programnum}{09.03.01}
@@ -29,15 +31,16 @@
 \newcommand{\apinitials}{И.О.}
 \newcommand{\aplastname}{Фамилия}
 \newcommand{\apname}{\apinitials~\aplastname}
-\newcommand{\apdegree}{д.ф.-м.н.}
-\newcommand{\aprank}{доцент}
+\newcommand{\apdegree}{ученая степень}
+\newcommand{\aprank}{звание}
 
 % Руководитель ВКР
 \newcommand{\sainitials}{И.О.}
 \newcommand{\salastname}{Фамилия}
 \newcommand{\saname}{\sainitials~\salastname}
-\newcommand{\sadegree}{к.ф.-м.н.}
-\newcommand{\sarank}{доцент}
+\newcommand{\sadegree}{ученая степень}
+\newcommand{\sarank}{звание}
+\newcommand{\sansutitle}{должность и место работы в НГУ}
 
 % Консультант
 \newcommand{\scinitials}{И.О.}
@@ -45,7 +48,11 @@
 \newcommand{\scname}{\sainitials~\salastname}
 
 % Вспомогательное
-\newcommand{\prevyear}[1][]{\ifthenelse{\equal{#1}{}}{2019г.}{20#1{19}г.}}
-\newcommand{\currentyear}[1][]{\ifthenelse{\equal{#1}{}}{2020г.}{20#1{20}г.}}
+\newcommand{\prevyear}[1][]{\ifthenelse{\equal{#1}{}}{2025г.}{20#1{25}г.}}
+\newcommand{\currentyear}[1][]{\ifthenelse{\equal{#1}{}}{2025}{20#1{25}}}
 \newcommand{\datetemplate}{<<\dotuline{\hspace{9mm}}>>\dotuline{\hspace{33mm}}20\dotuline{\hspace{5mm}}г.}
-\newcommand{\infotemplate}{$\underset{\text{(ФИО) / (подпись)}}{\text{\dotuline{\hspace{0.5\textwidth}/\hspace{0.45\textwidth}}}}$}
+\newcommand{\infotemplate}{$\underset{\text{(ФИО) / (подпись)}}
+{\text{\dotuline{\hspace{0.5\textwidth}/\hspace{0.45\textwidth}}}}$}
+\newcommand{\studentfiotemplate}{$\underset{\text{ФИО студента}}{\text{\uline{\hspace{0.95\textwidth}}}}$}
+\newcommand{\studentsigntemplate}{$\underset{\text{Подпись студента}}{\text{\uline{\hspace{0.95\textwidth}}}}$}
+\newcommand{\studentdatetemplate}{$\underset{\text{(заполняется от руки)}}{\text{<<\uline{\hspace{9mm}}>>\uline{\hspace{33mm}}20\uline{\hspace{5mm}}г.}}$}
