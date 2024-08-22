@@ -1,87 +1,56 @@
 \begin{titlepage}
 \newpage
+\setlength{\baselineskip}{5mm}
 
 \begin{center}
-	МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ \\[1mm]
-	ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\[1mm]
-	<<\MakeUppercase{\universitylong}>> \\[1mm]
+	МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РФ \\
+	ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ \\
+	\hspace{-0.5mm}<<\MakeUppercase{\universitylongsplit}>> \\
 	(\MakeUppercase{\university}, \universityshort)
 \end{center}
 
-\begin{flushleft}
-	\faculty \\
-	Кафедра \dotuline{\department\hfill} \\
-	Направление подготовки: \programnum\thinspace\MakeUppercase{\programname} \\
-	Образовательная программа: \programnum\thinspace\MakeUppercase{\programname} \\
-\end{flushleft}
-
 \begin{center}
-	\textbf{ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА} \\
-	\uline{\hfill\MakeUppercase{\topic}\hfill} \\[1.5mm]
-	\hrulefill \\
-	$\underset{\text{(название темы прописными буквами)}}{\uline{\hspace{\textwidth}}}$
+    \faculty \\
+    Кафедра \uline{\makebox[6cm][l]{\department}}
 \end{center}
 
-\begin{flushleft}
-	утверждена распоряжением проректора по учебной работе № \uline{\approvedby} 
-	от <<\uline{\dayapprovedby}>> \uline{\monthapprovedby} \prevyear[\uline] \\
-	скорректирована распоряжением проректора по учебной работе № \uline{\correctedby} 
-	от <<\uline{\daycorrectedby}>> \uline{\monthcorrectedby} \currentyear[\uline] \\
-\end{flushleft}
+Направление подготовки \programnum\thinspace{\programname}
 
-\begin{flushleft}
-	\begin{minipage}[t]{0.65\textwidth}
-		\newcommand{\sub}{(Фамилия, Имя, Отчество студента, группа)}
-		\StrLen{\sub}[\sublen]
-		\StrLen{\student}[\studentlen]
-		\ifthenelse{\sublen>\studentlen}
-		{
-			% В случае, когда ФИО короче подписи, добавляется небольшой отступ, чтобы избежать
-			% лишних пробелов. 
-			$\underset{\text{\sub}}{\text{\uline{\student\hspace{0.1\textwidth}}}}$\uline{\hfill}
-		}
-		{
-			$\underset{\text{\sub}}{\text{\uline{\student}}}$\uline{\hfill}
-		}
-		, группа \uline{\group} \\
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{0.2\textwidth}
-		$\underset{\text{(подпись студента)}}{\text{\uline{\hspace{\textwidth}}}}$ \\
-	\end{minipage}
-\end{flushleft}
+Направленность (профиль): \thinspace{\specialization}
+\vspace{1.53cm} % после параграфа автоматически отступ
 
-\begin{flushleft}
-	\begin{minipage}[b]{0.35\textwidth}
-		\textbf{<<К защите допущена>>} \\
-		Заведующий кафедрой, \\
-		\apdegree, \aprank \\
-		\apname \\
-		\infotemplate \\[2mm]
-		\datetemplate
-	\end{minipage}
-	\hspace{25mm}
-	\begin{minipage}[b]{0.35\textwidth}
-		\textbf{Руководитель ВКР} \\
-		\sadegree, \sarank \\
-		кафедры \department \\
-		\saname \\
-		\infotemplate \\[2mm]
-		\datetemplate
-	\end{minipage}
-\end{flushleft}
+\begin{center}
+    \hspace{7mm}\textbf{ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА} \\
+    \textbf{\student}
+\end{center}
 
-\begin{flushright}
-	\vfill
-	Дата защиты: \datetemplate
-	\vfill
-\end{flushright}
+Тема работы:
 
-\begingroup
-	\fontsize{10pt}{12pt}\selectfont
-	\begin{center}  
-		Новосибирск, \currentyear[\uline]
-	\end{center}
-\endgroup
+\begin{center}
+    \MakeUppercase{\textbf{\topic}}
+    \vspace{1.02cm} % см. коммент выше
+\end{center}
+
+
+\begin{minipage}[b]{0.35\textwidth}
+    \textbf{<<К защите допущена>>} \\
+    Заведующий кафедрой, \\
+    \apdegree, \aprank \\
+    \infotemplate \\
+    \datetemplate
+\end{minipage}
+\hspace{20mm}
+\begin{minipage}[b]{0.35\textwidth}
+    \textbf{Руководитель ВКР} \\
+    \sadegree, \sarank, \\
+    \sansutitle \\
+    \infotemplate \\
+    \datetemplate
+\end{minipage}
+
+\begin{center}  
+    \vfill
+    Новосибирск, \currentyear[\uline]
+\end{center}
 
 \end{titlepage}
