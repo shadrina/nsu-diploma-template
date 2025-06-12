@@ -1,6 +1,6 @@
 # nsu-diploma-template
 
-LaTeX-шаблон пояснительной записки ФИТ НГУ, оформленный согласно п.2.4 [программы ГИА](https://www.nsu.ru/n/information-technologies-department/education_fit/programs/OOP/09-03-01/knis/rabochie-programmy/09.03.01_KNiS_B3.pdfu)
+LaTeX-шаблон пояснительной записки ФИТ НГУ, оформленный согласно п.2.4 [программы ГИА](https://www.nsu.ru/n/information-technologies-department/education_fit/programs/OOP/09-03-01/knis/rabochie-programmy/09.03.01_KNiS_B3.pdf)
 
 ### Сборка
 

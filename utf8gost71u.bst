@@ -622,7 +622,7 @@ FUNCTION {bbl.medium.elres}
 { curlanguage "english" =
    { "Electronic resource" }
    { curlanguage "russian" =
-      { "{Электронный ресурс}" }
+      { "{ [Электронный ресурс]}" }
       { curlanguage "ukrainian" =
         { "{Електронний ресурс}" }
         { "language is not defined: " language "medium" * * warning$ "Electronic resource" }
@@ -1459,7 +1459,7 @@ FUNCTION {online}
 { output.bibitem
   format.authors output
   title howpublished new.sentence.checkb
-  format.title add.doi add.medium "title" output.check
+  format.title add.doi bbl.medium.elres "title" output.check
   howpublished new.dblslash.checka
   howpublished enclose.square.brackets output
   editor.organization.after
