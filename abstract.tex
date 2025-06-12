@@ -8,8 +8,11 @@
 	\textbf{АННОТАЦИЯ} \\
 	\vspace{5mm}
 	ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА БАКАЛАВРА \\
-	Наименование темы \uline{\topic\hfill} \\
+        \noindent
+        \begin{flushleft}
+            Наименование темы \uline{\parbox[t]{\linewidth}{\topic\hfill}} \\
 	\hrulefill
+        \end{flushleft}
 \end{center}
 
 \begin{flushleft}
@@ -20,7 +23,7 @@
 	Направление подготовки: \programnum\thinspace\programname \\
 	Направленность (профиль): \specialization \\
     \vspace{5mm}
-	% Объем работы на единицу меньше реального, так как аннотация с работой не переплетается
+	% Объем работы без приложений и на единицу меньше реального, так как аннотация с работой не переплетается
 	Объем работы: \total{page} страниц \\
 	Количество иллюстраций: \totalfigures \\
 	Количество таблиц: \totaltables \\
@@ -49,7 +52,7 @@
     \vspace{1.02cm}
 	\vfill
 	\student, \\ % Место для подписи
-	\today
+	\readydate\space\currentyear
 \end{flushleft}
 
 \end{par}

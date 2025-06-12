@@ -1,7 +1,10 @@
 % Общие сведения
-\newcommand{\student}{Фамилия Имя Отчество}
+\newcommand{\studentlastname}{Фамилия}
+\newcommand{\studentinitials}{Имя Отчество}
+\newcommand{\student}{\studentlastname \space \studentinitials}
 \newcommand{\studentfortask}{Фамилия Имя Отчество в дат. падеже}
 \newcommand{\studentforabstract}{Фамилия Имя Отчество в тв. падеже}
+\newcommand{\studentfortitle}{Фамилия Имя Отчество в род. падеже}
 \newcommand{\group}{12345}
 \newcommand{\department}{Название кафедры}
 \newcommand{\specialization}{Название направления}
@@ -19,13 +22,14 @@
 \newcommand{\dayapprovedby}{12}        % Дата
 \newcommand{\monthapprovedby}{ноября}  % Дата
 
+% Если необходимо
 % Распоряжение проректора по учебной работе о корректировке ВКР
 \newcommand{\correctedby}{321}         % Номер
 \newcommand{\daycorrectedby}{21}       % Дата
 \newcommand{\monthcorrectedby}{ноября} % Дата
 
 % Срок сдачи студентом готовой работы
-\newcommand{\readydate}{12 мая}
+\newcommand{\readydate}{20 мая}
 
 % Заведующий кафедрой
 \newcommand{\apinitials}{И.О.}
@@ -42,13 +46,21 @@
 \newcommand{\sarank}{звание}
 \newcommand{\sansutitle}{должность и место работы в НГУ}
 
+%  Соруководитель ВКР
+\newcommand{\csainitials}{И.О.}
+\newcommand{\csalastname}{Фамилия}
+\newcommand{\csaname}{\csainitials~\csalastname}
+\newcommand{\csadegree}{ученая степень}
+\newcommand{\csarank}{звание}
+\newcommand{\csansutitle}{должность и место работы в НГУ}
+
 % Консультант
 \newcommand{\scinitials}{И.О.}
 \newcommand{\sclastname}{Фамилия}
 \newcommand{\scname}{\sainitials~\salastname}
 
 % Вспомогательное
-\newcommand{\prevyear}[1][]{\ifthenelse{\equal{#1}{}}{2025г.}{20#1{25}г.}}
+\newcommand{\prevyear}[1][]{\ifthenelse{\equal{#1}{}}{2024г.}{20#1{24}г.}}
 \newcommand{\currentyear}[1][]{\ifthenelse{\equal{#1}{}}{2025}{20#1{25}}}
 \newcommand{\datetemplate}{<<\dotuline{\hspace{9mm}}>>\dotuline{\hspace{33mm}}20\dotuline{\hspace{5mm}}г.}
 \newcommand{\infotemplate}{$\underset{\text{(ФИО) / (подпись)}}
@@ -56,3 +68,12 @@
 \newcommand{\studentfiotemplate}{$\underset{\text{ФИО студента}}{\text{\uline{\hspace{0.95\textwidth}}}}$}
 \newcommand{\studentsigntemplate}{$\underset{\text{Подпись студента}}{\text{\uline{\hspace{0.95\textwidth}}}}$}
 \newcommand{\studentdatetemplate}{$\underset{\text{(заполняется от руки)}}{\text{<<\uline{\hspace{9mm}}>>\uline{\hspace{33mm}}20\uline{\hspace{5mm}}г.}}$}
+
+\newcommand{\sainfotemplate}{$\underset{\text{(ФИО) / (подпись)}}
+{\text{\dotuline{\salastname \hspace{1mm}\sainitials/\hspace{0.43\textwidth}}}}$}
+\newcommand{\csainfotemplate}{$\underset{\text{(ФИО) / (подпись)}}
+{\text{\dotuline{\csalastname \hspace{1mm}\csainitials/\hspace{0.52\textwidth}}}}$}
+\newcommand{\apinfotemplate}{$\underset{\text{(ФИО) / (подпись)}}
+{\text{\dotuline{\aplastname \hspace{1mm} \apinitials/\hspace{0.4\textwidth}}}}$}
+\newcommand{\studentinfotemplate}{$\underset{\text{(ФИО студента) / (подпись)}}
+{\text{\dotuline{\studentlastname \hspace{1mm} \studentinitials/\hspace{0.47\textwidth}}}}$}
